@@ -34,7 +34,7 @@ export class Api {
   } */
 
   static async addProduct(product: FormData) {
-    const { data } = await client.post("/product", product);
+    const { data } = await client.post("/products", product);
     return data;
   }
 
