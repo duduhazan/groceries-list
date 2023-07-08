@@ -1,0 +1,17 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "Debug Server",
+      "cwd": "${workspaceFolder}/server",
+      "program": "${workspaceFolder}/server/dist/main.js",
+      "request": "launch",
+      "skipFiles": ["<node_internals>/**"],
+      "type": "node",
+      "console": "integratedTerminal",
+      "envFile": "${workspaceFolder}/server/environment/.env.development",
+      "preLaunchTask": "build"
+    },
+
+  ]
+}

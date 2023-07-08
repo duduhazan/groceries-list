@@ -6,17 +6,22 @@ import { productsRouter } from "./routes/products.route";
 import { UserRouter } from "./routes/users.route";
 import { ImageStorage } from "./image-storage";
 import { authMiddleWare } from "./middlewares/auth.middleware";
+import { writeFile } from "fs/promises";
 
 async function startServer() {
-  await connectDB("mongodb://localhost:27017/supermarket");
+  await connectDB(process.env.DB_URL!);
 
-  const port = 3500;
+  const port = process.env.PORT;
   const app = express();
+  const keyJson = process.env.KEY_JSON;
+  if (keyJson) {
+    await writeFile("./key.json", process.env.KEY_JSON!);
+  }
 
   const imageStorage = new ImageStorage("./key.json", "shopping-cart-images");
-  const secret = "asdf!!!!";
+  const secret = process.env.SECRET!;
 
-  app.use(cors({ origin: "http://localhost:5173", credentials: true }));
+  app.use(cors({ origin: process.env.CLIENT_URL, credentials: true }));
 
   app.use(express.json());
 
@@ -28,7 +33,7 @@ async function startServer() {
 
   app.use(productsRouter(imageStorage));
 
-  app.listen(3500, () => {
+  app.listen(port, () => {
     console.log(`started server on port ${port}`);
   });
 }
