@@ -1,0 +1,20 @@
+{
+  "name": "groceries-list",
+  "version": "1.0.0",
+  "description": "Add groceries to your cart",
+  "main": "server/dist/main.js",
+  "scripts": {
+    "install": "cd server && npm install",
+    "start": "cd server && npm start"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/duduhazan/groceries-list.git"
+  },
+  "author": "Dudu Hazan",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/duduhazan/groceries-list/issues"
+  },
+  "homepage": "https://github.com/duduhazan/groceries-list#readme"
+}
