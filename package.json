@@ -4,8 +4,8 @@
   "description": "Add groceries to your cart",
   "main": "server/dist/main.js",
   "scripts": {
-    "install": "cd server && npm install && npm run build",
-    "start": "cd server && npm start"
+    "install": "cd server && npm install",
+    "start": "cd server && npm run build && npm start"
   },
   "engines": {
     "node": "16.18.1"
