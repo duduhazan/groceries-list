@@ -4,7 +4,7 @@
   "description": "Add groceries to your cart",
   "main": "server/dist/main.js",
   "scripts": {
-    "install": "cd server && npm install",
+    "install": "cd server && npm install --save-dev",
     "postinstall": "cd server && npm run build",
     "start": "cd server && npm start"
   },
