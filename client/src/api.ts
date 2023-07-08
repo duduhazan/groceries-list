@@ -2,7 +2,8 @@ import axios from "axios";
 import { Item } from "./interfaces/item.interfaces";
 import { User } from "./interfaces/user.interfaces";
 
-export const serverUrl = "http://localhost:3500";
+const {VITE_SERVER_URL: serverUrl} = import.meta.env
+
 console.log("using server url", serverUrl);
 const client = axios.create({ baseURL: serverUrl, withCredentials: true });
 client.interceptors.response.use((res) => {

@@ -1,6 +1,5 @@
 import "./style.css";
 import Button from "react-bootstrap/Button";
-import { SelectCallback } from "@restart/ui/esm/types"
 import { useEffect, useState } from "react";
 import { ListForm } from "./listForm";
 import { Api } from "../../api";
