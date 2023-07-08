@@ -7,6 +7,9 @@
     "install": "cd server && npm install && npm run build",
     "start": "cd server && npm start"
   },
+  "engines": {
+    "node": "16.18.1"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/duduhazan/groceries-list.git"
