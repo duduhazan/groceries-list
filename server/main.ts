@@ -10,8 +10,6 @@ import { writeFile } from "fs/promises";
 
 async function startServer() {
   await connectDB(process.env.DB_URL!);
-  console.log(process.env.CLIENT_URL);
-  
 
   const port = process.env.PORT;
   const app = express();
